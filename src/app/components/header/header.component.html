@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span routerLink="/home">Ugly Ape Store</span>
+  <span class="example-spacer"></span>
+  <div class="rightside-container">
+    <mat-chip *ngIf="totalQuantity !== 0" highlighted color="accent">
+     {{totalQuantity}} {{totalQuantityText}} | {{ totalPrice | currency:'EUR':'symbol':'1.2-2' }} 
+    </mat-chip>
+    <button *ngIf="!isCheckoutPage" mat-raised-button color="secondary" class="example-icon" aria-label="View Cart" [matBadge]="badgeValue"
+      matBadgeColor="warn" [matBadgeHidden]="badgeValue === 0" routerLink="/checkout">
+      <mat-icon>shopping_cart</mat-icon>
+      <span class="icon-text-container">
+        View Cart 
+      </span>
+    </button>
+  </div>
+</mat-toolbar>

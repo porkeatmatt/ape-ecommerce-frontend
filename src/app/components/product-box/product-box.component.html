@@ -1,0 +1,33 @@
+<!--Only center text when you're not in fullwidthmode-->
+<mat-card 
+    class="rounded-card mycard" 
+    style="background-color: #f8fcfd;" 
+    [ngClass]="{'text-center': !fullWidthMode}">
+
+    <div [ngClass]="{'flex items-center': fullWidthMode}">
+        <img 
+            class="mb-1 mx-auto h-[200px] rounded-full"
+            [ngClass]="{'h-[200px]' : !fullWidthMode, 'h-[260px]': fullWidthMode}" 
+            [src]="product.imageUrl" />
+        <div 
+            class="w-full" 
+            [ngClass]="{'px-8 flex flex-col justify-between' : fullWidthMode,}">
+            <div [style.paddingBottom.px]="fullWidthMode ? 0 : 12">
+                <p class="product-title">{{product.name}}</p>
+                <p *ngIf="fullWidthMode">{{product.description}}</p>
+                <div [ngClass]="{'flex justify-between': true, 'px-8': !fullWidthMode}">
+                    <div class="price-display">{{ product.unitPrice | currency: 'EUR'}}</div>
+                    <div [ngClass]="{'add-padding-right': fullWidthMode}">
+                        <button 
+                            (click) = "addToCart(product)"
+                            mat-raised-button color="primary"
+                            class="flex items-center"
+                            >Add To Cart
+                            <mat-icon class="ml-2">shopping_cart</mat-icon>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,29 @@
+<mat-card class="mb-4 mx-5">
+    <div class="flex justify-between mx-5">
+        <div>
+            <button mat-button [matMenuTriggerFor]="sortByMenu">
+                Sort by: {{sort}}
+                <mat-icon>expand_more</mat-icon>
+            </button>
+            <mat-menu #sortByMenu="matMenu">
+                <button mat-menu-item (click)="onSortUpdated('Price low -> high')">Price low -> high</button>
+                <button mat-menu-item (click)="onSortUpdated('Price high-> low')">Price high-> low</button>
+            </mat-menu>
+        </div>
+        <div>
+            <mat-checkbox [checked]="uglyLionsChecked" (change)="onUglyLionsCheckboxChange($event.checked)">Ugly Lions</mat-checkbox>
+            <mat-checkbox [checked]="uglyApesChecked" (change)="onUglyApesCheckboxChange($event.checked)">Ugly Apes</mat-checkbox>
+        </div>
+        <div class="flex items-center">
+            <button (click)="onColumnsUpdated(1)">
+                <mat-icon>view_list</mat-icon>
+            </button>
+            <button (click)="onColumnsUpdated(3)">
+                <mat-icon>view_module</mat-icon>
+            </button>
+            <button (click)="onColumnsUpdated(4)">
+                <mat-icon>view_comfy</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>

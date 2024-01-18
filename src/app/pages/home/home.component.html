@@ -1,0 +1,13 @@
+<div class="bg-pink-100">
+    <app-products-header (columnsCountChange)="onColumnsCountChange($event)"
+        (checkboxValuesChange)="onCheckboxValuesChange($event)" (sortChange)="onSortUpdated($event)">
+    </app-products-header>
+
+    <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
+        <mat-grid-tile *ngFor="let product of products">
+            <app-product-box [product]="product" class="w-full" [fullWidthMode]="cols ===1">
+            </app-product-box>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>

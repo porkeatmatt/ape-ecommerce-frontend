@@ -1,0 +1,32 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.custom-menu {
+  background-color: rgb(6 182 212);
+  }
+
+.white-icon {
+    color: white;
+    background-color: transparent;
+  }
+
+.icon-text-container {
+    display: flex;
+    align-items: center;
+  }
+
+.first-container {
+    background-color: #ff6f8b; /* Set your desired color for the first container */
+    color: white; /* Set text color to ensure readability on the background color */
+  }
+  
+.second-container {
+    background-color: #3498db; /* Set your desired color for the second container */
+    color: white; /* Set text color to ensure readability on the background color */
+  }
+
+.rightside-container {
+    display: flex;
+    gap: 16px; /* Adjust the gap value as needed */
+  }

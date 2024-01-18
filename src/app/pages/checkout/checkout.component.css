@@ -1,0 +1,80 @@
+
+table {
+    width: 100%;
+  background: #f6f4f4;
+  padding: 10px;
+  }
+  
+.header-row-background {
+    background-color: #FF6F8B;
+}
+
+.table-container{
+    width:90%;
+    margin: auto; 
+}
+
+.mat-column-product_image{
+    width: 28%;
+}
+
+.checkout-image{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.footer-style {
+    
+  border-top: 2px solid #e2e2e2;  
+  padding-top: 20px;  
+  padding-bottom: 20px;  
+}
+
+.cart-image {
+  border-radius:50%;
+  width:auto;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.large-text{
+  font-size: 25px;
+}
+
+.vertical-spacing > * {
+  margin-top: 30px; /* Adjust this value as needed for spacing */
+}
+
+.vertical-spacing > *:first-child {
+  margin-top: 0; /* Removes the margin from the first child */
+}
+
+.custom-padding {
+  padding: 18px;
+}
+
+.empty-cart{
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,01);
+}
+/*
+table {
+    width: 70%;
+    border-spacing: 0 8px !important;
+  }
+  
+  td[mat-cell] {
+    padding: 16px 0 16px 0;
+ 
+  }
+  
+  tr[mat-row] {
+    background: #79a1d8;
+  }
+
+  */
+
